@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .sell_with_us_send {
+            margin-top: 20px;
+        }
+        .upload-image-container {
+            cursor: pointer;
+        }
+
+        .upload-image-container__input {
+            opacity: 0;
+            cursor: pointer;
+        }
+        .sell-with-container {
+            color: #282828
+        }
+        .sell-with-container__image {
+            margin-bottom: 20px;
+        }
+        .sell-with-container  .btn-block-outline,
+        .sell-with-container  .btn-block-outline:hover{
+            padding: 8px 35px;
+        }
+
+        .sell-with-container  .input-container {
+            margin-bottom: 30px;
+            padding-bottom: 0;
+        }
+
+        .image-container{
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            color: #282828;
+            transition: all .3s;
+            padding: 5px;
+            font-size: 16px;
+            width: 80px;
+            height: 80px;
+        }
+        .image-container img {
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .image-remove,
+        .image-remove.close{
+            right: 0;
+            transform: translate(40%, -35%);
+            font-size: 25px;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            width: 25px;
+            height: 25px;
+            color: #282828;
+            top: 0;
+            opacity: 1;
+        }
+
+        .modal-image {
+            max-width: calc(100vw);
+            max-height: calc(100vh - 90px * 2);
+            object-fit: contain;
+        }
+
+        #imageModal .modal-content {
+            overflow: unset;
+        }
+    </style>
+</head>
+<body>
+<div class="col-xl-10 mx-auto sell-with-container">
+    <form action="" method="post" enctype="multipart/form-data" id="mutliForm">
+        <div class="d-flex flex-wrap" id="images-block"></div>
+        <div class="position-relative pt-4">
+            <div class="error text-danger img_ position-absolute file.0">
+            </div>
+            <div class="d-flex flex-wrap">
+                <div class="position-relative mr-2 upload-image-container">
+                    <label class="position-relative btn rounded-0 text-center bold-btn mb-4 overflow-hidden">
+                        <input type="file" placeholder="File" multiple name="file[]" value=""
+                               class="d-none multi position-absolute upload-image-container__input"
+                               id="upload-image">
+                        <span class="text-uppercase">Upload Files</span>
+                    </label>
+                </div>
+                <div>
+                    <button type="button"
+                            class="sell_with_us_send btn btn-block-outline rounded-0 shadow-none text-uppercase mb-4 mt-0">
+                        Submit
+                    </button>
+                    <input type="hidden" id="datas" name="images" data-cmp-id=""
+                           data-token="">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="chooser.js"></script>
+</body>
+</html>
